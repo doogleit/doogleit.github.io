@@ -9,10 +9,10 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en"
-title                    : "Doug Taliaferro's Blog"
+title                    : "Doug Taliaferro"
 title_separator          : "-"
 name                     : "Doug Taliaferro"
-description              : "Welcome to my blog.  I'm an IT pro and technologist focusing on VMware technologies, virtualization, Powershell, PowerCLI, automation and IT infrastructure."
+description              : "Doug is an IT pro and technologist focusing on VMware technologies, virtualization, Powershell, PowerCLI, automation and IT infrastructure."
 url                      : "http://taliaferro.org" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -86,9 +86,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Doug Taliaferro"
+  name             : ""
   avatar           : "/assets/images/profile.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Welcome to my blog.  I'm an IT pro and technologist focusing on VMware technologies, virtualization, Powershell, PowerCLI, automation and IT infrastructure."
+  bio              : "Doug is an IT professional and technologist focusing on VMware technologies, virtualization, Powershell, automation and IT/Cloud infrastructure."
   location         : "Atlanta, GA"
   email            :
   uri              : 

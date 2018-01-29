@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "EsxCli Awesomeness"
+title:  "EsxCli Advanced Settings"
 date:   2017-12-28 16:43:32 -0500
 categories: vsphere esxi powercli
 ---
