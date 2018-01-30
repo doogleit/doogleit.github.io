@@ -4,7 +4,7 @@ title:  "Minecraft Server Build"
 date:   2017-12-23 18:22:43 -0500
 categories: minecraft gaming
 ---
-I've been thinking about setting up a small Minecraft server for a while now.  It's a great game for kids and can also serve as an educational tool.  There are a lot of options out there and a ton of info already written on this, but I thought it might be useful to summarize my thoughts/experience.
+I've been thinking about setting up a small Minecraft server for a while now.  It's a great game for kids and can also serve as an educational tool.  As a quick side note, if you know a child that might be interested in computer science check out the Hour of Code activities at [code.org][code] and [makecode.com][makecode].  Both have excellent resources and educational tools, some of which are related to Minecraft.  For building your own server, there are a lot of options out there and a ton of info already written on this, but I thought it might be useful to summarize my thoughts/experience.
 
 I started experimenting with this by just running a sever locally on my home computer.  Downloading and running the 'vanilla' Minecraft server jar is pretty simple and there's a good tutorial on the [Minecraft Wiki][minecraft-wiki].  Most servers however use a number of plugins for customization and added functionality.  'Spigot' is the most popular custom server, optimized for performance, and likely the best option in most cases. There's good summary of all this custom stuff on the [Spigot Wiki][spigot-wiki].
 
@@ -24,3 +24,5 @@ That's it! After the first year I'll probably re-evaluate where this server is g
 [spigot-wiki]: https://www.spigotmc.org/wiki/what-is-spigot-craftbukkit-bukkit-vanilla-forg/
 [aws-free-tier]: https://aws.amazon.com/free/
 [build-tools]: https://www.spigotmc.org/wiki/buildtools/
+[code]: https://code.org/learn
+[makecode]: https://makecode.com
