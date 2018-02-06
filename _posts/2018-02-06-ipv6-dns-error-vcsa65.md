@@ -14,11 +14,11 @@ First I disabled IPv6 in the DCUI on both the source and destination appliance.
 
 ![vCSA DCUI](/assets/images/vcsa-dcui-ipv6.png)
 
-If you're unfamiliar with the upgrade process it actually deploys a new 6.5 appliance with a temporary IP address, migrates the configuration and data from the 6.0 appliance (the source) to the 6.5 appliance(the destination), powers off the 6.0 appliance, and finally the 6.5 appliance assumes the network identity (IP and hostname) of the old one.  With IPv6 disabled on both appliances I logged into them with SSH and verified that running "dig \`hostname\`" did not return any IPv6 addresses.
+If you're unfamiliar with the upgrade process it actually deploys a new 6.5 appliance with a temporary IP address, migrates the configuration and data from the 6.0 appliance (the source) to the 6.5 appliance(the destination), powers off the 6.0 appliance, and finally the 6.5 appliance assumes the network identity (IP and hostname) of the old one.
 
-The error message persisted, but at this point I could be confident that IPv6 was not being used and I suspected that the pre-upgrade script was using a Python library that was still resolving the IPv6 address.  I should insert a warning here.  The following is purely for educational purposes. It should not be attempted in anything resembling a production environmentand and is most likely unsupported.
+With IPv6 disabled on both appliances I attempted the upgrade again.  The error message persisted, but at this point I was even more confident that IPv6 was not being used and that the pre-upgrade script was still checking for the IPv6 address resolution anyway.  
 
-Running 'ps aux' in my SSH session on the 6.5 appliance revealed several upgrade scripts running in '/usr/lib/vmware/cis_upgrade_runner/bootstrap_scripts'.  I changed to this directory and began searching for the source of the error message.  Running "grep 'resolves to IPv6' *.py" directed me to the file "upgrade_commands.py", where I located the section that was checking for this condition and commented it out by prefixing each line with a "#".
+I should insert a warning before continuing - the following is purely for educational purposes, should not be attempted in a production environmentand, and is most likely unsupported!  Running "ps aux" in my SSH session on the 6.5 appliance revealed several upgrade scripts running in "/usr/lib/vmware/cis_upgrade_runner/bootstrap_scripts".  I changed to this directory and began searching for the source of the error message.  Running "grep 'resolves to IPv6' *.py" directed me to the file "upgrade_commands.py", where I located the section that was checking for this condition and commented it out by prefixing each line with a "#".
 
 {% highlight python %}
     #if hasNetConflicts:
@@ -35,5 +35,5 @@ Running 'ps aux' in my SSH session on the 6.5 appliance revealed several upgrade
     #                     sourceFqdn))
 {% endhighlight %}
 
-After commenting out the above section that was logging the IPv6 error I restarted the upgrade and it completed without issue.  Again, I don't recommend doing this unless it is a true test environment that you can afford to rebuild if necessary.  I just wanted to document/share the experience and a few details about how the vCSA 6.5 pre-upgrade check works.  If you haven't tried out 6.5 yet I highly recommend it.  See more about what's new over on the [VMware vSphere Blog](https://blogs.vmware.com/vsphere/2016/10/whats-new-in-vsphere-6-5-vcenter-server.html).
+After commenting out the above section that was logging the IPv6 error I restarted the upgrade and it completed without issue.  Again, I don't recommend doing this unless it is a true test environment that you can afford to rebuild if necessary.  I just wanted to document/share the experience and a few details about how the vCSA 6.5 pre-upgrade check works.  If you haven't tried the vCenter 6.5 appliance yet I highly recommend it.  See more about what's new over on the [VMware vSphere Blog](https://blogs.vmware.com/vsphere/2016/10/whats-new-in-vsphere-6-5-vcenter-server.html).
 
