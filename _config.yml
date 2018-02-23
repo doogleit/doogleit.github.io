@@ -9,7 +9,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en"
-title                    : "Doug Taliaferro"
+title                    : "doogleit.github.io"
 title_separator          : "-"
 name                     : "Doug Taliaferro"
 description              : "Doug is an IT pro and technologist focusing on VMware technologies, virtualization, Powershell, PowerCLI, automation and IT infrastructure."
