@@ -42,7 +42,7 @@ systemctl enable docker
 Next simply pull (download) and run the container.
 ```
 docker pull microsoft/powershell
-docker run -it microsoft/powershell
+docker run -it --rm microsoft/powershell
 ```
 
 You should now have a nice PS prompt. 
