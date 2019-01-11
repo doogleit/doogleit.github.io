@@ -37,7 +37,11 @@ In the New Alert configuration provide a Name, Description, a Recommendation if 
 
 ![Log Insight](/assets/images/loginsight-ca-newalert.png)
 
-Now we should get an email alert whenever these events occur and can act accordingly.  This is just an example to get started with. We could include all error events from the CA or expand it to monitor the IIS logs for web enrollment.  I'm thinking about expanding on this and might follow this up with another post in the near future.  In the mean time I'd welcome any feedback or suggestions.  Find me on Twitter [@virtually_doug][2].
+Now we should get an email alert whenever these events occur and can act accordingly.  Here's another example to query for all error events from two providers, both the CA and the Online Reponder.
+
+![Log Insight](/assets/images/loginsight-ca-query-all.png)
+
+ We could include more warning events from the CA or expand it to monitor the IIS logs for web enrollment.  I'm thinking about expanding on this and might have a follow up post in the near future.  In the mean time I'd welcome any feedback or suggestions.  Find me on Twitter [@virtually_doug][2].
 
 
 [1]: https://blogs.technet.microsoft.com/askds/2010/08/31/the-case-of-the-enormous-ca-database/
