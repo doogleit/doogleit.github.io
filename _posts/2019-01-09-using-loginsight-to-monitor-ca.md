@@ -1,8 +1,8 @@
 ---
 layout: single
 title:  "Using Log Insight to Monitor a Windows CA"
-categories: vRealize
-tags: Monitoring LogInsight
+categories: vrealize
+tags: monitoring loginsight
 ---
 
 Log Insight is a really versatile tool when it comes to monitoring and searching logs.  I often forget that it can be useful for a lot more than just your VMware infrastructure.  In this post I'm going to configure a Log Insight agent on a Windows Certificate Authority to send event logs to Log Insight and create an alert for specific event IDs in the Application event log.

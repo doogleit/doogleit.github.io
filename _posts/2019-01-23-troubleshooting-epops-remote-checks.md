@@ -2,7 +2,7 @@
 layout: single
 title:  "Troubleshooting Endpoint Operations Remote Checks"
 categories: vrealize
-tags: Monitoring vROps
+tags: monitoring vrops
 ---
 
 The Endpoint Operations functionality that is included with vROps is a great way to do more with vROps as a monitoring solution.  With Endpoint Operations you install an agent in the guest operating system (or the operating system of a physical server) that can report on all kinds of OS metrics, including service and process availability.  Another feature of the Endpoint Ops agent is the ability to perform "remote checks".  These are what I think of as the more traditional type of monitoring checks such as pinging an IP address, checking for a HTTP response from a website, or a response from a TCP port.  These types of checks are useful for insuring that services are available from other network locations.  For example, the Endpoint Ops agent on your Windows server might be reporting that the IIS service is running and available, but that doesn't necessarily mean that clients can access it over HTTP from across the network or from another location/site.  There could be any number of scenarios that cause availability issues, making monitoring critical services and infrastructure IPs from remote locations invaluable.
