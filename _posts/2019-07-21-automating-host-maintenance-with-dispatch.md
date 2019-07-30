@@ -180,6 +180,6 @@ Using the output as a template, take the properties and values that you would no
 
 I'm working on another function to do essentially the same thing with nodes in SolarWinds.  If you use SolarWinds for monitoring it will unmanage a host in Solarwinds when it enters maintenance mode and re-manage it when it exits maintenance.  Look for a part 2 to this post, hopefully coming soon!
 
-[1]: https://doogleit.github.io/2019/06/event-based-automation-with-dispatch/
+[1]: https://doogleit.github.io/2019/07/event-based-automation-with-dispatch/
 [2]: https://github.com/doogleit/powercli-misc/tree/master/dispatch
 [3]: https://vmware.github.io/dispatch/documentation/usage/functions
