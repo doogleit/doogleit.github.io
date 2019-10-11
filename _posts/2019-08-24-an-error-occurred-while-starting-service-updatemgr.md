@@ -65,7 +65,7 @@ Traceback (most recent call last):
 ImportError: No module named ipaddr
 ```
 
-Using pip, the [Python package manager][2], I installed the missing module.
+Using pip, the [Python package manager][2], I installed the missing module.  Before running any of the below commands make sure you take a snapshot of vCenter and have a working backup. This may not be supported, so take appropriate precautions and proceed at your own risk.
 ```shell
 root@vcenter [ ~ ]# pip install ipaddr
 Collecting ipaddr
