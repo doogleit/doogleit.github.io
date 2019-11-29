@@ -44,14 +44,14 @@ functions:
 ```
 
 ## Deploying the functions
-1. To deploy these functions clone the example from GitHub:
+To deploy these functions clone the example from GitHub:
 
 ```shell
 git clone https://github.com/doogleit/vcenter-event-broker-appliance
 cd vcenter-event-broker-appliance/examples/powercli/hostmaint-alarms
 ```
 
-2. If you've already created a secret named 'vcconfig' from one of the other PowerCLI examples and want to use the same vCenter server and credentials you can skip this next step.  Note that the 'vcconfig' secret used in the Python tagging example is different and won't work for these functions.  Configure your vCenter details in the vcconfig.json file and create the secret:
+If you've already created a secret named 'vcconfig' from one of the other PowerCLI examples and want to use the same vCenter server and credentials you can skip this next step.  Note that the 'vcconfig' secret used in the Python tagging example is different and won't work for these functions.  Configure your vCenter details in the vcconfig.json file and create the secret:
 
 ```json
 {
@@ -64,7 +64,8 @@ cd vcenter-event-broker-appliance/examples/powercli/hostmaint-alarms
 faas-cli secret create vcconfig --from-file=vcconfig.json --tls-no-verify
 ```
 
-3. Next modify the gateway in the stack.yml file with your vCenter Event Broker Appliance address and deploy the functions:
+Finally modify the gateway in the stack.yml file with your vCenter Event Broker Appliance address and deploy the functions:
+
 ```yaml
 provider:
   name: faas
