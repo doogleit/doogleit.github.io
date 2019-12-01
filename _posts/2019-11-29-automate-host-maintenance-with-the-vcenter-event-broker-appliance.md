@@ -7,16 +7,16 @@ header:
   og_image: /assets/images/stack.yml.png
 ---
 
-The vCenter Event Broker Appliance is a new [VMware Fling][2] and open source project that was recently [released at VMworld Europe][1].  A preview of it was also presented at VMworld US which I had the pleasure of attending.  If you haven't seen either of these sessions I highly recommend watching the recording of [#CODE1379E "If This Then That" for vSphere - The Power of Event Driven Automation session][11].  I'm quite interested in this project and really excited to see all of the cool automation the community does with it.
+The vCenter Event Broker Appliance is a new [VMware Fling][2] and open source project that was recently [released at VMworld Europe][1].  Using [OpenFaaS][12] and its vCenter [event connector][13] functions can be run based on vCenter events.  A preview of it was also presented at VMworld US which I had the pleasure of attending.  If you haven't seen either of these sessions I highly recommend watching the recording of [#CODE1379E "If This Then That" for vSphere - The Power of Event Driven Automation session][11].  I'm quite interested in this project and really excited to see all of the cool automation the community does with it.
 
-If you haven't deployed the appliance the [Getting Started][3] guide has all the details for getting it setup.  Also be sure to join the [VMware {Code} Slack channel][4]. All of my work is based on the existing samples [on GitHub][5] and Opvizor's excellent article: [Audit VM configuration changes using the vCenter Event Broker][6].  A huge thanks to these guys for all of their work.
+If you haven't deployed the appliance the [Getting Started][3] guide has all the details for getting it setup.  Also be sure to join the [VMware {Code} Slack channel][4]. All of my work is based on the existing samples [on GitHub][5] and Opvizor's excellent article: [Audit VM configuration changes using the vCenter Event Broker][6].  A huge thanks to these guys for all of their work and special thanks to [OpenFaaS][12] and Alex Ellis for making this all possible.
 
 This example will disable alarm actions on a host while it is in maintenance mode.  It is actually two functions using the same script.  The first function subscribes to the `entered.maintenance.mode` event to run when a host is put into maintenance mode and disable its alarms.  The second function subscribes to the `exit.maintenance.mode` event to re-enable alarms when the host exits maintenance mode.  The script looks at the event type (or in OpenFaaS speak the "topic") that called the function and performs the appropriate action to disable/enable alarms.  Here is what the stack.yml file looks like with both functions:
 
 ```yaml
 version: 1.0
 provider:
-  name: faas
+  name: openfaas
   gateway: https://veba.yourdomain.com
 functions:
   powercli-entermaint:
@@ -70,7 +70,7 @@ Finally modify the gateway in the stack.yml file with your vCenter Event Broker 
 
 ```yaml
 provider:
-  name: faas
+  name: openfaas
   gateway: https://veba.yourdomain.com
 ...
 ```
@@ -110,3 +110,5 @@ I was previously using [VMware Dispatch][7] to experiment with running functions
 [9]: https://doogleit.github.io/2019/07/automating-host-maintenance-with-dispatch/
 [10]: https://doogleit.github.io/2019/08/automating-host-maintenance-with-dispatch-part-2/
 [11]: https://videos.vmworld.com/global/2019/videoplayer/29523
+[12]: https://www.openfaas.com/
+[13]: https://github.com/openfaas-incubator/openfaas-vcenter-connector
