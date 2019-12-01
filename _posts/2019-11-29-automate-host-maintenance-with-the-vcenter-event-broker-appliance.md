@@ -3,6 +3,8 @@ title:  "Automate Host Maintenance with the vCenter Event Broker Appliance"
 date: 2019-11-29 11:00:00 -0400
 categories: vSphere
 tags: vcenter automation veba
+header:
+  og_image: /assets/images/stack.yml.png
 ---
 
 The vCenter Event Broker Appliance is a new [VMware Fling][2] and open source project that was recently [released at VMworld Europe][1].  A preview of it was also presented at VMworld US which I had the pleasure of attending.  If you haven't seen either of these sessions I highly recommend watching the recording of [#CODE1379E "If This Then That" for vSphere - The Power of Event Driven Automation session][11].  I'm quite interested in this project and really excited to see all of the cool automation the community does with it.
