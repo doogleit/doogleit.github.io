@@ -1,8 +1,9 @@
 ---
 title:  "Automating Host Maintenance with VMware Dispatch"
-image: /assets/images/dispatch-logo.png
 categories: vsphere
 tags: automation dispatch
+header:
+  og_image: /assets/images/dispatch-logo.png
 ---
 
 Following up on my previous post, [Event Based Automation with VMware Dispatch][1], this one will demonstrate using Dispatch to automate actions when a host enters or exits maintenance mode.  The Dispatch function we're going to create will disable alarm actions on the host when it enters maintenance mode and re-enable alarm actions when the host exits maintenance mode.

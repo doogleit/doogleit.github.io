@@ -1,8 +1,9 @@
 ---
 title: "Event Based Automation with VMware Dispatch"
-image: /assets/images/dispatch-logo.png
 categories: vsphere
 tags: automation dispatch
+header:
+  og_image: /assets/images/dispatch-logo.png
 ---
 
 One of the things that immediately drew my attention to Dispatch was the vCenter event driver.  Executing an automated task based on a vCenter event has always been something really attractive to me.  There are other ways to do this, but it always seemed like they were just not ideal for the environment I was working in for one reason or another. Most of the examples that I've seen use a vCenter alarm to run a command or send an SNMP trap.  

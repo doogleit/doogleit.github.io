@@ -1,7 +1,9 @@
 ---
 title:  "Automating Host Maintenance with VMware Dispatch Part 2"
-categories: vSphere
-tags: automation devops dispatch solarwinds
+categories: vsphere
+tags: automation dispatch solarwinds
+header:
+  og_image: /assets/images/stack.yml.png
 ---
 
 For part 2 of [Automating Host Maintenance with VMware Dispatch][1] we're going to create a function that will unmanage the node in Solarwinds when a host enters maintenance mode and re-manage it when it exits maintenance.  In SolarWinds unmanaging a node is similar to putting an object in maintenance in vROps.  It stops polling that node and no new alerts will trigger.  An alternative is to simply mute alerts, which continues polling the node/collecting statistics, but mutes new alerts.  If you'd prefer to only mute alerts I have an example of how to do that commented out in the script.  However with only alerts muted the node will still turn red on dashboards and show that it is down if it is rebooted.  If you have a NOC or other team monitoring for things like this it is probably preferable to unmanage it.
